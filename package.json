@@ -1,0 +1,26 @@
+{
+  "name": "namaste-react-elisha",
+  "version": "1.0.0",
+  "description": "This is Namaste React completed by Elisha Ojha",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elisha235/namaste-react-elisha.git"
+  },
+  "author": "Elisha Ojha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Elisha235/namaste-react-elisha/issues"
+  },
+  "homepage": "https://github.com/Elisha235/namaste-react-elisha#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
