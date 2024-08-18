@@ -139,3 +139,10 @@ it will be highly optimized build for PROD
 21.
 Parcel's JavaScript compiler, CSS transformer, and source maps implementation are written in Rust for maximum performance. 
 It's 10-20x faster than other JavaScript-based tools!
+
+22.
+This means this will definetly work on these version (100%), it might not work on other browsers
+"browserslist": [
+    "Last 10 Chrome version",
+    "Last 2 Firefox version"
+  ]
