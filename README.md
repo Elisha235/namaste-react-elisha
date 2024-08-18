@@ -85,3 +85,33 @@ npx - for executing the command
 
 14.
 we will install react & react-dom as normal production dependency
+
+15.
+git push origin main:
+This is the correct command to push changes to the main branch on the origin remote repository.
+
+16.
+The type="module" attribute in a 
+<script> </script> tag tells the browser that the script is a JavaScript module. 
+This has several important implications:
+Module Loading:
+The browser knows to treat the script as a module and will use the module loading mechanism to fetch and execute it. This allows you to use import and export statements to interact with other modules.
+
+17.
+Modules are automatically executed in strict mode.
+
+18.
+Modules have their own scope, meaning that variables and functions declared within a module are 
+not accessible globally unless explicitly exported. 
+This helps prevent naming collisions and promotes better code organization.
+
+19. 
+Parcel created a dev build 
+- created Local Server
+- refreshing the page automatically 
+- Hot Module Replacement
+- It uses a File Watching Algorithm written in C++
+- Parcel is also caching things and gives faster build - in .parcel-cache
+-Parcel does IMAGE OPTIMIZATION as well
+- when creating a production file it will BUNDLE things up
+- COMPRESS the file

@@ -1,3 +1,5 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
 /**
  * NESTED ELEMENTS
  * 
@@ -12,7 +14,7 @@
 //CREATEELEMENT - TYPE OF ELEMENT, PROPERTIES, CHILDREN - ARRAY TYPE FOR SIBLING CHILD
 //it gets very tedious if we use this approach, because that will have more nexted divs - NOW COMES THE PICUTE OF JSX
 
-const heading = React.createElement("h1", {id:"heading", xyz:"abc"}, "Hello world from h1");
+const heading = React.createElement("h1", {id:"heading", xyz:"abc"}, "This is Namaste React by Elisha");
 
 //<h1 id="heading" xyz="abc">Hello world from React</h1> - adding attribute 
 // these are the props - 
