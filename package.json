@@ -2,7 +2,7 @@
   "name": "namaste-react-elisha",
   "version": "1.0.0",
   "description": "This is Namaste React completed by Elisha Ojha",
-  "main": "App.js",
+
   "scripts": {
     "test": "jest"
   },
