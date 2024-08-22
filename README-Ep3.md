@@ -41,5 +41,27 @@ JSX is not HTML inside Javascript.
 *It is HTML LIKE SYNTAX or XLM LIKE.*
 
 #6
+*JSX - it not pure Javascript (JS engine won't understand this, it understand only ECMAScript)*
+const jsxHeading = <h1>JSX Heading 😈</h1>;
+
+#7
+//JSX - it not pure Javascript (JS engine won't understand this, it understand only ECMAScript)
+//it is working because of Parcel
+//JSX code is transpiled (converted to a code that React can understand)
+const jsxHeading = <h1 id="heading">JSX Heading 😈</h1>;
+
+-Parcel is doing that for us.
+Parcel is manager and it depends on Babel to that 
+
+#8
+why className and not class?
+As class is a reserved keyword in JavaScript
+
+#9
+JSX 
+
+- You should either use quotes (for string values) or curly braces (for expressions), but not both in the same attribute.
+-By default, React DOM escapes any values embedded in JSX before rendering them. Thus it ensures that you can never inject anything that’s not explicitly written in your application. Everything is converted to a string before being rendered. This helps prevent XSS (cross-site-scripting) attacks.
+
 
 
