@@ -64,4 +64,90 @@ JSX
 -By default, React DOM escapes any values embedded in JSX before rendering them. Thus it ensures that you can never inject anything that’s not explicitly written in your application. Everything is converted to a string before being rendered. This helps prevent XSS (cross-site-scripting) attacks.
 
 
+---
 
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+//React Element - as it is React.createElement => Object => renders on DOM then it becomes HTML
+const heading = React.createElement(
+  "h1",
+  { id: "heading" },
+  "Namaste React 💻 🚀"
+);
+
+
+//JSX => it not pure Javascript (JS engine won't understand this, it understand only ECMAScript)
+//it is working because of Parcel
+//JSX code is transpiled (converted to a code that React can understand)
+const jsxHeading = (
+  <h1 id="heading" className="head" tabIndex="1">
+    JSX Heading 😈
+  </h1>
+);
+
+//whatever happens in React app it will render inside React app
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(jsxHeading);
+
+----
+
+COMPONENT COMPOSITION 
+- keeping two component inside each other
+
+
+
+
+
+CODE -
+
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+const heading = React.createElement(
+  "h1",
+  { id: "heading" },
+  "Namaste React 💻 🚀"
+);
+
+//React 
+const jsxHeading = (
+    <span className="elemy" tabIndex="1">
+      React Element 😈
+    </span>
+  );
+
+
+const Title = () => (
+  <h1 id="heading" className="head" tabIndex="1">
+    JSX Heading 😈
+  </h1>
+);
+
+// React Components => Two Types of Components
+// Class Based COmponent - old practice
+// Functional Component - new way
+
+//React Functional Component - simple JS function - Capital Letter Class is must
+//it can return bunch of React Element
+const HeadingComponent = () => {
+  return (
+    <div id="container">
+      {jsxHeading} <h2>{500}</h2>
+      {console.log("Arre! Ye kis line mein aagye hai aap!")}
+      <Title />
+      {Title()}
+      <h1 className="heading">Functional Component</h1>
+    </div>
+  );
+};
+
+//whatever happens in React app it will render inside React app
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+//we render React Element like this 
+//root.render(jsxHeading);
+
+//render React Component
+root.render(<HeadingComponent />)
