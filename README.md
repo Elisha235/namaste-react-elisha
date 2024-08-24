@@ -129,6 +129,7 @@ Parcel created a dev build
 - Tree Shaking - remove unused code ( minify it)
 - Different dev and prod bundles 
 
+
 20. 
 Different dev and prod bundles - npx parcel build index.html  - dist is automatically updated
 remove this   "main": "App.js" from package.json
@@ -136,9 +137,11 @@ creates development build and dist is updated. (HMR)
 we see compresses index.html file, index.css, index.js
 it will be highly optimized build for PROD
 
+
 21.
 Parcel's JavaScript compiler, CSS transformer, and source maps implementation are written in Rust for maximum performance. 
 It's 10-20x faster than other JavaScript-based tools!
+
 
 22.
 This means this will definetly work on these version (100%), it might not work on other browsers
