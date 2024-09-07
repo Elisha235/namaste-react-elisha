@@ -1,0 +1,82 @@
+What is Props? 
+
+Passing and arguement to a function - it makes it object and use it in function
+We can also destruct our prop
+like this ->
+ <RestaurantCard restaurantName="Tunday Kebabi" restaurantCuisine="Mughlai, Biryani"/>
+ it will wrap inside the object and will pass as an object
+
+ 
+const RestaurantCard = (props) => {
+    return (
+    <div className="restaurant-card">
+        <img className="restaurant-photo" src="https://img.freepik.com/fotos-premium/brochetas-carne-parrilla-kebab-fotografia-paisaje-delicioso_984100-58.jpg" />
+        <h4>{props.restaurantName}</h4>
+        <h4>{props.restaurantCuisine} </h4>
+        <h5> 4.3 Rated </h5>
+        <h5> 28 minutes </h5>
+ </div>)
+}
+
+//DESTRUCTURED VERSION - THIS IS JAVASCRIPT
+const {restaurantCuisine, restaurantName} = props; //same thing
+const RestaurantCard = ({restaurantCuisine, restaurantName}) => {
+    return (
+    <div className="restaurant-card">
+        <img className="restaurant-photo" src="https://img.freepik.com/fotos-premium/brochetas-carne-parrilla-kebab-fotografia-paisaje-delicioso_984100-58.jpg" />
+        <h4>{restaurantName}</h4>
+        <h4>{restaurantCuisine} </h4>
+        <h5> 4.3 Rated </h5>
+        <h5> 28 minutes </h5>
+    </div>)
+}
+
+
+CONFIG DRIVEN UI
+Based on data we're receiving from Backend that will help us.
+veg or non veg
+what should come from API ?
+why are you sending this data?
+Since UI is powered by data
+UI + DATA LEVEL => Frontend
+
+
+//Passing the object in A component
+
+-Object
+<RestaurantCard restaurantObjData={restaurantObj}/>
+
+-String
+<RestaurantCard restaurantObjData="restaurantObj"/>
+
+//Optional Chaining to check if we have the data - restaurantObjData?.info - used here while destructuring
+
+ const {cloudinaryImageId, name, cuisines, avgRating, costForTwo} = restaurantObjData?.info;
+
+
+
+ //OPTIMIZINING AN ARRAY USING MAP 
+
+  {restaurantList.map((restaurant) => {
+          return <RestaurantCard restaurantObjData={restaurant} />;
+        })}
+        {/* <RestaurantCard restaurantObjData={restaurantList[0]} />
+        <RestaurantCard restaurantObjData={restaurantList[1]} />
+        <RestaurantCard restaurantObjData={restaurantList[2]} />
+        <RestaurantCard restaurantObjData={restaurantList[3]} />
+        <RestaurantCard restaurantObjData={restaurantList[4]} />
+        <RestaurantCard restaurantObjData={restaurantList[5]} />
+        <RestaurantCard restaurantObjData={restaurantList[6]} />
+        <RestaurantCard restaurantObjData={restaurantList[7]} /> */}
+      </div> 
+
+
+NOTE : WHENEVER YOU'RE LOOPING YOU HAVE TO GIVE A UNIQUE KEY PROPERTY TO EACH ITEM
+
+
+NOT USING KEYYS IN REACT LOOP IS NOT ACCEPTABLE
+INDEX IS ACCEPTABLE BUT WHAT IF ORDER IS CHANGED
+
+BEST SOL: USE SPECIFIC & UNIQUE ID FOR THAT
+
+NOT USING KEY <<<<<<< USING INDEX <<<<<<<<< USING UNIQUE ID
